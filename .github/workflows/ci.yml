@@ -36,7 +36,7 @@ jobs:
 
       - name: Generate Allure report
         if: always()
-        run: npm run report
+        run: mkdir -p allure-results && npm run report
 
       - name: Upload Allure artifact
         uses: actions/upload-artifact@v4
